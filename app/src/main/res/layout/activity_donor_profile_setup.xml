@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wall09"
+    android:layout_height="match_parent"
+    tools:context="com.masood.edonate.DonorProfileSetup">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/basic_book"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:layout_gravity="center">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+
+<de.hdodenhof.circleimageview.CircleImageView
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:src="@drawable/dummyimage"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:id="@+id/setupImageButton"/>
+        <Button
+            android:id="@+id/chooseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setupImageButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="#FFFFFF"
+            android:text="Choose"
+            android:onClick="profileImageButtonClicked"
+            android:textColor="#0a332d"/>
+
+
+        <ImageView
+            android:id="@+id/imageSignupIdentity"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/inputLayoutProfile"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_phone_white_24dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputLayoutProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chooseButton"
+            android:layout_marginTop="25dp">
+
+            <EditText
+                android:id="@+id/displayName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:hint="Enter Contact Number"
+                android:inputType="phone"
+                android:paddingBottom="10dp"
+                android:paddingLeft="45dp"
+                android:textColor="#FFFFFF" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/inputLayoutProfile"
+            android:textColor="#0a332d"
+            android:background="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:onClick="doneButtonClicked"
+            android:text="Done" />
+
+
+    </RelativeLayout>
+  </LinearLayout>
+</ScrollView>
+</LinearLayout>

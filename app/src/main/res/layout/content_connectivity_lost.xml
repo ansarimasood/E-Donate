@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wall09"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.masood.edonate.ConnectivityLost"
+    tools:showIn="@layout/activity_connectivity_lost">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center">
+        <ProgressBar
+            android:id="@+id/runningBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCheck1"
+            android:gravity="center"
+            android:textSize="36sp"
+            android:textColor="@color/white_screen"
+            android:layout_centerInParent="true"
+            android:text="Check your connection and try again"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Try Again"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:textColor="@color/white_screen"
+            android:id="@+id/tryAgain"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/textCheck1"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+</LinearLayout>

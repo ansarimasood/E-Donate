@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall09"
+    tools:context="com.masood.edonate.DonateClothes">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/basic_clothes"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearlay">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:textSize="30sp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="28sp"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We appreciate your efforts for donating clothes"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/linearlay"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/text2"
+        android:layout_marginTop="10dp"
+        android:background="#FFFF"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        app:srcCompat="@drawable/clott" />
+
+    <ImageView
+        android:id="@+id/imageAddress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/inputLayoutAddress"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ic_home_white_24dp"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputLayoutAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/clothesPickup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:hint="Pick-up Address"
+            android:paddingBottom="10dp"
+            android:paddingLeft="45dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageQuantity"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/inputLayoutQuantity"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ic_shopping_cart_white_24dp"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputLayoutQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputLayoutAddress"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/clothesQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="50dp"
+            android:inputType="number"
+            android:hint="Quantity"
+            android:paddingBottom="10dp"
+            android:paddingLeft="45dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputLayoutQuantity"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        android:textColor="#0a332d"
+        android:layout_marginBottom="50dp"
+        android:onClick="donateClothesButtonClicked"
+        android:text="Donate" />
+
+    </RelativeLayout>
+</ScrollView>
+</LinearLayout>
